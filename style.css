@@ -192,22 +192,21 @@ header .l3 {
   font-size: 2.125rem;
 }
 
-.navList li:first-child a {
-  color: #00c4ff;
-}
-
-.navList li .openContactNav {
-  color: #ff5da8;
-}
-
 .navList li .openContactNav:hover {
   cursor: pointer;
 }
 
 .navList a,
 .navList a:visited {
-  color: #ff5da8;
   text-decoration: none;
+}
+
+.navList .navLink {
+  color: #ff5da8;
+}
+
+.navList .navLink.highlight {
+  color: #00c4ff;
 }
 
 .burger {
@@ -285,7 +284,7 @@ header .l3 {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  font-family: 'lexend mega', sans-serif;
+  font-family: "lexend mega", sans-serif;
   color: black;
 }
 
@@ -443,7 +442,7 @@ header .l3 {
   -webkit-clip-path: polygon(0 20%, 0 90%, 100% 100%);
           clip-path: polygon(0 20%, 0 90%, 100% 100%);
   z-index: 1;
-  font-family: 'lexend mega', sans-serif;
+  font-family: "lexend mega", sans-serif;
   color: black;
 }
 
@@ -471,12 +470,18 @@ header .l3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
   margin-top: 150px;
-  margin-bottom: 150px;
   -webkit-perspective: 700px;
           perspective: 700px;
 }
@@ -498,8 +503,7 @@ header .l3 {
           align-items: center;
   height: 480px;
   width: 77%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 75px;
   background-color: white;
 }
 
@@ -861,7 +865,7 @@ header .l3 {
   }
   .project {
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     width: 100vw;
   }
   .projectTextContainer {

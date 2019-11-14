@@ -67,7 +67,6 @@ function contactNavEventListener() {
   let screenWidth = window.innerWidth;
   let openContact = document.querySelector('.openContactNav');
   openContact.onclick = () => {
-    console.log('openContact clicked');
     showContact(screenWidth);
   };
   openContact.addEventListener('keyup', e => {
@@ -87,18 +86,24 @@ function closeContactEventListener() {
 }
 
 function projectInfoEventListener() {
-  let infoButton = document.querySelector('.infoButton');
-  infoButton.onclick = () => {
-    console.log('info button was clicked');
-    toggleInfo();
-  };
+  let infoButtons = document.querySelectorAll('.infoButton');
+  infoButtons.forEach(btn => {
+    let whichProject = btn.classList.item(1);
+    btn.onclick = () => {
+      //console.log('info button was clicked');
+      toggleInfo(whichProject);
+    };
+  });
 }
 
 function closeProjectInfoEventListener() {
-  let closeInfoButton = document.querySelector('.closeInfoButton');
-  closeInfoButton.onclick = () => {
-    toggleInfo();
-  };
+  let closeInfoButton = document.querySelectorAll('.closeInfoButton');
+  closeInfoButton.forEach(btn => {
+    let which = btn.classList.item(1);
+    btn.onclick = () => {
+      toggleInfo(which);
+    };
+  });
 }
 
 function navLinkMobileClickEventListener() {
@@ -114,11 +119,10 @@ function navLinkMobileClickEventListener() {
   });
 }
 
-function toggleInfo() {
-  let projectContainerOverlay = document.querySelector('.projectContainerOverlay');
-  let closeInfoButton = document.querySelector('.closeInfoButton');
+function toggleInfo(which) {
+  let projectContainerOverlay = document.querySelector(`.projectContainerOverlay.${which}`);
+  let closeInfoButton = document.querySelector(`.closeInfoButton.${which}`);
   let cursor = window.getComputedStyle(closeInfoButton).getPropertyValue('cursor');
-  console.log('TCL: toggleInfo -> cursor', cursor);
 
   if (cursor === 'auto') {
     closeInfoButton.style.cursor = 'pointer';
@@ -136,6 +140,8 @@ function toggleInfo() {
 function showContact(width) {
   let buttons = document.querySelector('.contactButtons');
   let contact = document.querySelector('.contactInfo');
+  let contactLink = document.querySelector('.contactLink');
+  contactLink.classList.toggle('highlight');
   //contact.style.display = 'inline';
   document.querySelector('.close').tabIndex = 0;
   if (width <= 1024) {
@@ -149,6 +155,8 @@ function showContact(width) {
 function closeContact(width) {
   let buttons = document.querySelector('.contactButtons');
   let contact = document.querySelector('.contactInfo');
+  let contactLink = document.querySelector('.contactLink');
+  contactLink.classList.toggle('highlight');
   document.querySelector('.close').tabIndex = -1;
   if (width <= 1024) {
     setTimeout(() => {

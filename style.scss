@@ -154,14 +154,6 @@ header {
     font-family: 'lexend mega', sans-serif;
     font-size: 2.125rem;
 
-    &:first-child a {
-      color: $color1;
-    }
-
-    & .openContactNav {
-      color: $color2;
-    }
-
     & .openContactNav:hover {
       cursor: pointer;
     }
@@ -169,8 +161,16 @@ header {
 
   & a,
   & a:visited {
-    color: $color2;
+    //color: $color2;
     text-decoration: none;
+  }
+
+  & .navLink {
+    color: $color2;
+  }
+
+  & .navLink.highlight {
+    color: $color1;
   }
 }
 
@@ -243,7 +243,7 @@ header {
   align-content: center;
   align-items: center;
   height: 100%;
-  font-family: 'lexend mega', sans-serif;
+  font-family: $lexend;
   color: black;
 
   h3 {
@@ -375,7 +375,7 @@ header {
   background-color: white;
   clip-path: polygon(0 20%, 0 90%, 100% 100%);
   z-index: 1;
-  font-family: 'lexend mega', sans-serif;
+  font-family: $lexend;
   color: black;
 
   & p {
@@ -401,10 +401,11 @@ header {
 .project {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   margin-top: 150px;
-  margin-bottom: 150px;
   perspective: 700px;
 }
 
@@ -416,8 +417,7 @@ header {
   align-items: center;
   height: 480px;
   width: 77%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 75px;
   background-color: white;
 }
 
@@ -776,7 +776,7 @@ header {
 
   .project {
     margin-top: 200px;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
     width: 100vw;
   }
 

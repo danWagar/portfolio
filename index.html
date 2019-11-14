@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dan Wagar's Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link href="reset.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link
@@ -18,10 +19,10 @@
       <canvas class="canvas"></canvas>
       <nav class="nav" id="nav">
         <ul class="navList">
-          <li><a class="navLink" href="#home">Home</a></li>
-          <li><a class="navLink" href="#about">About</a></li>
-          <li><a class="navLink" href="#projects">Projects</a></li>
-          <li><i class="openContactNav navLink" tabindex="0">Contact</i></li>
+          <li><a class="navLink homeLink" href="#home">Home</a></li>
+          <li><a class="navLink aboutLink" href="#about">About</a></li>
+          <li><a class="navLink projectsLink" href="#projects">Projects</a></li>
+          <li><i class="openContactNav navLink contactLink" tabindex="0">Contact</i></li>
         </ul>
         <i class="closeBurger"><a href="#" class="target">&#x2716;</a></i>
       </nav>
@@ -124,8 +125,8 @@
       </div>
       <section class="project" id="projects">
         <div class="projectContainer container1" aria-live="polite">
-          <div class="projectContainerOverlay">
-            <button class="closeInfoButton" tabindex="-1"><i>&#x2716;</i></button>
+          <div class="projectContainerOverlay info1">
+            <button class="closeInfoButton info1" tabindex="-1"><i>&#x2716;</i></button>
             <div class="projectTextContainer">
               <p>
                 The NFL Records Quiz app was developed as an exercise in producing a single page web app with
@@ -151,7 +152,7 @@
           <ul class="technologies">
             <li><img src="images/html5.svg" alt="html5 logo" /></li>
             <li><img src="images/javascript-4.svg" alt="javascript logo" /></li>
-            <li><img src="images/sass-1.svg" alt="sass logo" /></li>
+            <li><img src="images/css-5.svg" alt="sass logo" /></li>
             <li><img src="images/jquery-2.svg" alt="jquery logo" /></li>
           </ul>
           <img class="screenShot" src="images/NFLQuiz.jpg" alt="NFL quiz screen-shot" />
@@ -161,7 +162,7 @@
                 <li class="projectButton">
                   <i class="fab fa-github"></i></li
               ></a>
-              <button class="infoButton">
+              <button class="infoButton info1">
                 <li class="projectButton"><i class="fa fa-info"></i></li>
               </button>
               <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
@@ -171,10 +172,59 @@
             </ul>
           </nav>
         </div>
+
+        <div class="projectContainer container1" aria-live="polite">
+          <div class="projectContainerOverlay info2">
+            <button class="closeInfoButton info2" tabindex="-1"><i>&#x2716;</i></button>
+            <div class="projectTextContainer">
+              <p>
+                The NFL Records Quiz app was developed as an exercise in producing a single page web app with
+                dynamically generated html for all event transitions.
+              </p>
+              <p>
+                The app follows the model-view-controller design paradigm. It utilizes a store to track the
+                users performance on the quiz as well as to display questions, whether a user correctly
+                answered a question, and final results for the quiz.
+              </p>
+              <p>
+                As I highly value the power of good design, much focus was given to ensuring that the app was
+                attractive and engaging. User feedback is clear and presented in a fun way by incorporating
+                images and a final results ranking.
+              </p>
+            </div>
+          </div>
+          <div class="projectTitle">
+            <h5 class="primaryText">MyBookmarks App</h5>
+            <h6 class="secondaryText">React-like app utilizing Web API</h6>
+          </div>
+          <h7 class="techTitle">Technologies</h7>
+          <ul class="technologies">
+            <li><img src="images/html5.svg" alt="html5 logo" /></li>
+            <li><img src="images/javascript-4.svg" alt="javascript logo" /></li>
+            <li><img src="images/sass-1.svg" alt="sass logo" /></li>
+            <li><img src="images/jquery-2.svg" alt="jquery logo" /></li>
+          </ul>
+          <img class="screenShot" src="images/MyBookmarks.jpg" alt="MyBookmarks App screen-shot" />
+          <nav class="projectNav">
+            <ul class="projectButtons">
+              <a href="https://github.com/thinkful-ei-heron/DanW-bookmarks-app" target="_blank">
+                <li class="projectButton">
+                  <i class="fab fa-github"></i></li
+              ></a>
+              <button class="infoButton info2">
+                <li class="projectButton"><i class="fa fa-info"></i></li>
+              </button>
+              <a href="https://thinkful-ei-heron.github.io/DanW-bookmarks-app/" target="_blank">
+                <li class="projectButton">
+                  <i class="fa fa-play play"></i></li
+              ></a>
+            </ul>
+          </nav>
+        </div>
       </section>
     </main>
-    <script src="spray.js" type="text/javascript"></script>
-    <script src="slide.js" type="text/javascript"></script>
-    <script src="style.js" type="text/javascript"></script>
+    <script src="spray.js"></script>
+    <script src="style.js"></script>
+    <script src="intersection.js"></script>
   </body>
 </html>
