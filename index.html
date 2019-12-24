@@ -123,10 +123,112 @@
         <div class="sectionTitle"><p>PROJECTS</p></div>
         <p class="second">PROJECTS</p>
       </div>
+
       <section class="project" id="projects">
         <div class="projectContainer container1" aria-live="polite">
           <div class="projectContainerOverlay info1">
             <button class="closeInfoButton info1" tabindex="-1"><i>&#x2716;</i></button>
+            <div class="projectTextContainer">
+              <p>
+                For players of the game Borderlands 3 it is all about the loot. Unfotunately the game does not
+                provide many in-game resources for keeping track of loot. The Borderlands 3 Gear Tracker web
+                app was designed as a resource such that players will always be able to know what loot is in
+                their inventory and where it is located.
+              </p>
+              <p>
+                This RESTful app was developed with React on the client side and with Node, Express and Knex
+                on the server side with testing handled by Chai and Mocha.
+              </p>
+              <p>
+                As with all my projects there is a strong emphasis on design. The app displays large amounts
+                of data and the layout is designed to be both organized and dynamically expandable and
+                collapsible.
+              </p>
+            </div>
+          </div>
+          <div class="projectTitle">
+            <h5 class="primaryText">BL3 Gear Tracker</h5>
+            <h6 class="secondaryText">Fullstack REST app for tracking<br />Borderlands 3 player inventory</h6>
+          </div>
+          <h7 class="techTitle">Technologies</h7>
+          <ul class="technologies row1">
+            <li><img src="images/react.svg" alt="html5 logo" /></li>
+            <li><img src="images/css-5.svg" alt="css3 logo" /></li>
+            <li><img src="images/nodejs.svg" alt="nodejs logo" /></li>
+            <li><img class="express" src="images/express.svg" alt="express logo" /></li>
+          </ul>
+          <ul class="technologies row2">
+            <li><img src="images/knex.svg" alt="knex logo" /></li>
+            <li><img src="images/chai.svg" alt="chai logo" /></li>
+            <li><img src="images/mocha.svg" alt="mocha logo" /></li>
+          </ul>
+          <img class="screenShot" src="images/bl3.webp" alt="Borderlands 3 Gear Tracker screen-shot" />
+          <nav class="projectNav">
+            <ul class="projectButtons">
+              <a href="https://github.com/danWagar/bl3tracker-client" target="_blank">
+                <li class="projectButton">
+                  <i class="fab fa-github"></i></li
+              ></a>
+              <button class="infoButton info1">
+                <li class="projectButton"><i class="fa fa-info"></i></li>
+              </button>
+              <a href="https://bl3tracker-client.now.sh" target="_blank">
+                <li class="projectButton">
+                  <i class="fa fa-play play"></i></li
+              ></a>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="projectContainer container1" aria-live="polite">
+          <div class="projectContainerOverlay info3">
+            <button class="closeInfoButton info3" tabindex="-1"><i>&#x2716;</i></button>
+            <div class="projectTextContainer">
+              <p>
+                The My Bookmarks App is an exercise in learning to implement a RESTful Web API and is written
+                in pure Javascript as a precursor to learning React.
+              </p>
+              <p>
+                Like the quiz app below it follows the model-view-controller design paradigm, but in this case
+                a object oriented design was implemented. It expands upon the lessons learned in developing
+                the quiz app to ensure that the state of the front end data store remains in-line with the
+                data stored on the backend server.
+              </p>
+              <p>A simple and clean design makes for an enjoyable and intuitive user experience.</p>
+            </div>
+          </div>
+          <div class="projectTitle">
+            <h5 class="primaryText">MyBookmarks App</h5>
+            <h6 class="secondaryText">React-like app utilizing Web API</h6>
+          </div>
+          <h7 class="techTitle">Technologies</h7>
+          <ul class="technologies">
+            <li><img src="images/html5.svg" alt="html5 logo" /></li>
+            <li><img src="images/javascript-4.svg" alt="javascript logo" /></li>
+            <li><img src="images/sass-1.svg" alt="sass logo" /></li>
+            <li><img src="images/jquery-2.svg" alt="jquery logo" /></li>
+          </ul>
+          <img class="screenShot" src="images/MyBookmarks.jpg" alt="MyBookmarks App screen-shot" />
+          <nav class="projectNav">
+            <ul class="projectButtons">
+              <a href="https://github.com/thinkful-ei-heron/DanW-bookmarks-app" target="_blank">
+                <li class="projectButton">
+                  <i class="fab fa-github"></i></li
+              ></a>
+              <button class="infoButton info3">
+                <li class="projectButton"><i class="fa fa-info"></i></li>
+              </button>
+              <a href="https://thinkful-ei-heron.github.io/DanW-bookmarks-app/" target="_blank">
+                <li class="projectButton">
+                  <i class="fa fa-play play"></i></li
+              ></a>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="projectContainer container1" aria-live="polite">
+          <div class="projectContainerOverlay info2">
+            <button class="closeInfoButton info2" tabindex="-1"><i>&#x2716;</i></button>
             <div class="projectTextContainer">
               <p>
                 The NFL Records Quiz app was developed as an exercise in producing a single page web app with
@@ -162,59 +264,10 @@
                 <li class="projectButton">
                   <i class="fab fa-github"></i></li
               ></a>
-              <button class="infoButton info1">
-                <li class="projectButton"><i class="fa fa-info"></i></li>
-              </button>
-              <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
-                <li class="projectButton">
-                  <i class="fa fa-play play"></i></li
-              ></a>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="projectContainer container1" aria-live="polite">
-          <div class="projectContainerOverlay info2">
-            <button class="closeInfoButton info2" tabindex="-1"><i>&#x2716;</i></button>
-            <div class="projectTextContainer">
-              <p>
-                The NFL Records Quiz app was developed as an exercise in producing a single page web app with
-                dynamically generated html for all event transitions.
-              </p>
-              <p>
-                The app follows the model-view-controller design paradigm. It utilizes a store to track the
-                users performance on the quiz as well as to display questions, whether a user correctly
-                answered a question, and final results for the quiz.
-              </p>
-              <p>
-                As I highly value the power of good design, much focus was given to ensuring that the app was
-                attractive and engaging. User feedback is clear and presented in a fun way by incorporating
-                images and a final results ranking.
-              </p>
-            </div>
-          </div>
-          <div class="projectTitle">
-            <h5 class="primaryText">MyBookmarks App</h5>
-            <h6 class="secondaryText">React-like app utilizing Web API</h6>
-          </div>
-          <h7 class="techTitle">Technologies</h7>
-          <ul class="technologies">
-            <li><img src="images/html5.svg" alt="html5 logo" /></li>
-            <li><img src="images/javascript-4.svg" alt="javascript logo" /></li>
-            <li><img src="images/sass-1.svg" alt="sass logo" /></li>
-            <li><img src="images/jquery-2.svg" alt="jquery logo" /></li>
-          </ul>
-          <img class="screenShot" src="images/MyBookmarks.jpg" alt="MyBookmarks App screen-shot" />
-          <nav class="projectNav">
-            <ul class="projectButtons">
-              <a href="https://github.com/thinkful-ei-heron/DanW-bookmarks-app" target="_blank">
-                <li class="projectButton">
-                  <i class="fab fa-github"></i></li
-              ></a>
               <button class="infoButton info2">
                 <li class="projectButton"><i class="fa fa-info"></i></li>
               </button>
-              <a href="https://thinkful-ei-heron.github.io/DanW-bookmarks-app/" target="_blank">
+              <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
                 <li class="projectButton">
                   <i class="fa fa-play play"></i></li
               ></a>
