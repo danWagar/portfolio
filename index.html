@@ -59,28 +59,6 @@
         </div>
       </div>
 
-      <footer>
-        <nav class="contactNav">
-          <ul class="contactButtons">
-            <li>
-              <a href="https://github.com/danWagar" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/daniel-wagar-22335a70/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <button class="openContact">
-                <i class="open fa fa-envelope" id="contact"></i>
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </footer>
-
       <div class="sectionTitle"><p>ABOUT ME</p></div>
       <p class="second">ABOUT ME</p>
 
@@ -105,11 +83,8 @@
               passion for working in a team to solve problems to this new domain.
             </p>
             <p>
-              I think IntersectionObserver is the coolest, and I'm currently learning to implement web workers
-              into my JS animations.
-            </p>
-            <p>
-              I'm dreaming of the future when more complex animations won't be so expensive.
+              Beyond programming I have a strong interest in design, including creating custom animations and
+              images. I hope to one day be as good at design as I am at coding.
             </p>
             <p>
               I want to bring my passion to you too, let's imagine something awesome and make it a reality!
@@ -119,15 +94,15 @@
         </section>
       </section>
 
-      <div class="titleContainer">
+      <div class="titleContainer" id="projects">
         <div class="sectionTitle"><p>PROJECTS</p></div>
         <p class="second">PROJECTS</p>
       </div>
 
-      <section class="project" id="projects">
+      <section class="project" id="projectsObserve">
         <div class="projectContainer container1" aria-live="polite">
-          <div class="projectContainerOverlay info1">
-            <button class="closeInfoButton info1" tabindex="-1"><i>&#x2716;</i></button>
+          <div class="projectContainerOverlay info4">
+            <button class="closeInfoButton info4" tabindex="-1"><i>&#x2716;</i></button>
             <div class="projectTextContainer">
               <p>
                 For players of the game Borderlands 3 it is all about the loot. Unfotunately the game does not
@@ -146,11 +121,68 @@
               </p>
             </div>
           </div>
-          <div class="projectTitle">
-            <h5 class="primaryText">BL3 Gear Tracker</h5>
-            <h6 class="secondaryText">Fullstack REST app for tracking<br />Borderlands 3 player inventory</h6>
+          <header class="projectTitle">
+            <h1 class="primaryText">manageLazily</h1>
+            <h2 class="secondaryText">Fullstack Project Management App</h2>
+          </header>
+          <span class="techTitle">Technologies</span>
+          <ul class="technologies row1">
+            <li><img src="images/react.svg" alt="html5 logo" /></li>
+            <li><img src="images/css-5.svg" alt="css3 logo" /></li>
+            <li><img src="images/cypress.svg" alt="cypress.io logo" /></li>
+          </ul>
+          <ul class="technologies row2">
+            <li><img src="images/firebase.svg" alt="firebase logo" /></li>
+            <li><img src="images/Cloud-Firestore-Logo.svg" alt="firebase logo" /></li>
+            <li><img src="images/chart.svg" alt="chart.js logo" /></li>
+          </ul>
+          <a class="screenShot" href="https://managelazily.com" target="_blank">
+            <img src="images/project_view.webp" alt="manageLazily screen-shot" />
+          </a>
+          <nav class="projectNav">
+            <ul class="projectButtons">
+              <a href="https://github.com/balayaydemir/Capstone-Group3-Client" target="_blank">
+                <li class="projectButton">
+                  <i class="fab fa-github"></i>
+                </li>
+              </a>
+              <button class="infoButton info1">
+                <li class="projectButton"><i class="fa fa-info"></i></li>
+              </button>
+              <a href="https://managelazily.com" target="_blank">
+                <li class="projectButton">
+                  <i class="fa fa-play play"></i></li
+              ></a>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="projectContainer container1" aria-live="polite">
+          <div class="projectContainerOverlay info3">
+            <button class="closeInfoButton 3" tabindex="-1"><i>&#x2716;</i></button>
+            <div class="projectTextContainer">
+              <p>
+                For players of the game Borderlands 3 it is all about the loot. Unfotunately the game does not
+                provide many in-game resources for keeping track of loot. The Borderlands 3 Gear Tracker web
+                app was designed as a resource such that players will always be able to know what loot is in
+                their inventory and where it is located.
+              </p>
+              <p>
+                This RESTful app was developed with React on the client side and with Node, Express and Knex
+                on the server side with testing handled by Chai and Mocha.
+              </p>
+              <p>
+                As with all my projects there is a strong emphasis on design. The app displays large amounts
+                of data and the layout is designed to be both organized and dynamically expandable and
+                collapsible.
+              </p>
+            </div>
           </div>
-          <h7 class="techTitle">Technologies</h7>
+          <header class="projectTitle">
+            <h1 class="primaryText">BL3 Gear Tracker</h1>
+            <h2 class="secondaryText">Fullstack REST app for tracking<br />Borderlands 3 player inventory</h2>
+          </header>
+          <span class="techTitle">Technologies</span>
           <ul class="technologies row1">
             <li><img src="images/react.svg" alt="html5 logo" /></li>
             <li><img src="images/css-5.svg" alt="css3 logo" /></li>
@@ -162,7 +194,9 @@
             <li><img src="images/chai.svg" alt="chai logo" /></li>
             <li><img src="images/mocha.svg" alt="mocha logo" /></li>
           </ul>
-          <img class="screenShot" src="images/bl3.webp" alt="Borderlands 3 Gear Tracker screen-shot" />
+          <a class="screenShot" href="https://bl3tracker-client.now.sh" target="_blank">
+            <img src="images/bl3.webp" alt="Borderlands 3 Gear Tracker screen-shot" />
+          </a>
           <nav class="projectNav">
             <ul class="projectButtons">
               <a href="https://github.com/danWagar/bl3tracker-client" target="_blank">
@@ -181,8 +215,8 @@
         </div>
 
         <div class="projectContainer container1" aria-live="polite">
-          <div class="projectContainerOverlay info3">
-            <button class="closeInfoButton info3" tabindex="-1"><i>&#x2716;</i></button>
+          <div class="projectContainerOverlay info2">
+            <button class="closeInfoButton info2" tabindex="-1"><i>&#x2716;</i></button>
             <div class="projectTextContainer">
               <p>
                 The My Bookmarks App is an exercise in learning to implement a RESTful Web API and is written
@@ -197,18 +231,24 @@
               <p>A simple and clean design makes for an enjoyable and intuitive user experience.</p>
             </div>
           </div>
-          <div class="projectTitle">
-            <h5 class="primaryText">MyBookmarks App</h5>
-            <h6 class="secondaryText">React-like app utilizing Web API</h6>
-          </div>
-          <h7 class="techTitle">Technologies</h7>
+          <header class="projectTitle">
+            <h1 class="primaryText">MyBookmarks App</h1>
+            <h2 class="secondaryText">Dynamic web app utilizing Web API</h2>
+          </header>
+          <span class="techTitle">Technologies</span>
           <ul class="technologies">
             <li><img src="images/html5.svg" alt="html5 logo" /></li>
             <li><img src="images/javascript-4.svg" alt="javascript logo" /></li>
             <li><img src="images/sass-1.svg" alt="sass logo" /></li>
             <li><img src="images/jquery-2.svg" alt="jquery logo" /></li>
           </ul>
-          <img class="screenShot" src="images/MyBookmarks.jpg" alt="MyBookmarks App screen-shot" />
+          <a
+            class="screenShot"
+            href="https://thinkful-ei-heron.github.io/DanW-bookmarks-app/"
+            target="_blank"
+          >
+            <img src="images/MyBookmarks.jpg" alt="MyBookmarks App screen-shot" />
+          </a>
           <nav class="projectNav">
             <ul class="projectButtons">
               <a href="https://github.com/thinkful-ei-heron/DanW-bookmarks-app" target="_blank">
@@ -227,8 +267,8 @@
         </div>
 
         <div class="projectContainer container1" aria-live="polite">
-          <div class="projectContainerOverlay info2">
-            <button class="closeInfoButton info2" tabindex="-1"><i>&#x2716;</i></button>
+          <div class="projectContainerOverlay info1">
+            <button class="closeInfoButton info1" tabindex="-1"><i>&#x2716;</i></button>
             <div class="projectTextContainer">
               <p>
                 The NFL Records Quiz app was developed as an exercise in producing a single page web app with
@@ -246,35 +286,61 @@
               </p>
             </div>
           </div>
-          <div class="projectTitle">
-            <h5 class="primaryText">NFL Records Quiz</h5>
-            <h6 class="secondaryText">Dynamic single page web app</h6>
-          </div>
-          <h7 class="techTitle">Technologies</h7>
+          <header class="projectTitle">
+            <h1 class="primaryText">NFL Records Quiz</h1>
+            <h2 class="secondaryText">Dynamic single page web app</h2>
+          </header>
+          <span class="techTitle">Technologies</span>
           <ul class="technologies">
             <li><img src="images/html5.svg" alt="html5 logo" /></li>
             <li><img src="images/javascript-4.svg" alt="javascript logo" /></li>
             <li><img src="images/css-5.svg" alt="sass logo" /></li>
             <li><img src="images/jquery-2.svg" alt="jquery logo" /></li>
           </ul>
-          <img class="screenShot" src="images/NFLQuiz.jpg" alt="NFL quiz screen-shot" />
+          <a class="screenShot" href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
+            <img src="images/NFLQuiz.jpg" alt="NFL quiz screen-shot" />
+          </a>
           <nav class="projectNav">
             <ul class="projectButtons">
               <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp" target="_blank">
                 <li class="projectButton">
-                  <i class="fab fa-github"></i></li
-              ></a>
+                  <i class="fab fa-github"></i>
+                </li>
+              </a>
               <button class="infoButton info2">
                 <li class="projectButton"><i class="fa fa-info"></i></li>
               </button>
               <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
                 <li class="projectButton">
-                  <i class="fa fa-play play"></i></li
-              ></a>
+                  <i class="fa fa-play play"></i>
+                </li>
+              </a>
             </ul>
           </nav>
         </div>
       </section>
+
+      <footer>
+        <nav class="contactNav">
+          <ul class="contactButtons">
+            <li>
+              <a href="https://github.com/danWagar" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/daniel-wagar-22335a70/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <button class="openContact">
+                <i class="open fa fa-envelope" id="contact"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </main>
     <script src="spray.js"></script>
     <script src="style.js"></script>
