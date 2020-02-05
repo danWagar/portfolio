@@ -936,6 +936,7 @@ header .l3 {
         align-self: end;
     -ms-grid-column-align: start;
         justify-self: start;
+    padding-bottom: 5px;
     font-family: "lexend mega", sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
