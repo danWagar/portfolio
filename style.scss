@@ -12,6 +12,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -121,8 +122,9 @@ header {
   height: 100vh;
   opacity: 0;
   clip-path: circle(25px at calc(100vw - 45px) 40px);
-  transition: all 0.5s ease-in-out;
+  pointer-events: none;
   z-index: 3;
+  transition: all 0.5s ease-in-out;
 
   & a {
     text-decoration: none;
@@ -133,6 +135,7 @@ header {
     clip-path: circle(75%);
     background-color: rgba(0, 0, 0, 0.9);
     opacity: 1;
+    pointer-events: auto;
     z-index: 10;
   }
 }
@@ -287,18 +290,11 @@ header {
       font-size: 1.75rem;
     }
 
-    & a {
+    & a,
+    &:visited,
+    &:hover,
+    &:focus {
       color: $color1;
-      &:visited {
-        color: $color1;
-      }
-      &:hover {
-        color: $color3;
-      }
-      &:focus {
-        outline: none;
-        color: $color3;
-      }
     }
 
     & button {
@@ -311,10 +307,9 @@ header {
       }
     }
 
-    & .open:hover,
-    & .open:focus {
+    & .open:hover {
       outline: none;
-      color: $color3;
+      color: $color1;
     }
 
     &.fade {
@@ -331,24 +326,36 @@ header {
   bottom: -240px;
   height: 240px;
   width: 100vw;
-  z-index: 10;
+  z-index: -1;
   transition: transform 1s;
 
   .contactContainer {
     width: 100%;
     text-align: center;
+    padding-top: 10px;
     font-family: 'open sans', sans-serif;
     font-size: 1.125rem;
     background-color: $color1;
-    color: black;
   }
 
-  p {
+  .email_link {
+    display: block;
     padding-top: 25px;
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+
+  & p {
+    padding-top: 25px;
+    color: white;
   }
 
   &.show,
-  &:target {
+  .target {
     transform: translateY(-240px);
   }
 
@@ -459,6 +466,12 @@ header {
   }
 }
 
+.projectTextContainer p a,
+.projectTextContainer p a:hover,
+.projectTextContainer p a:visited {
+  color: $color1;
+}
+
 .container1 {
   background-image: linear-gradient(30deg, rgba($color1, 0.2) 10%, rgba($color2, 0.2));
 }
@@ -547,6 +560,11 @@ header {
   justify-content: space-between;
   list-style: none;
 
+  & a {
+    color: $color2;
+    text-decoration: none;
+  }
+
   & a:hover,
   & a:visited {
     color: $color2;
@@ -554,20 +572,22 @@ header {
 
   & button {
     background-color: rgba(0, 0, 0, 0);
-    border: none;
   }
 }
 
 .projectButton {
+  display: grid;
+  place-content: center center;
   height: 45px;
   width: 45px;
-  text-align: center;
   line-height: 45px;
   font-size: 1.7rem;
   color: $color2;
 
   & button {
     background: none;
+    width: 45px;
+    height: 45px;
     border: none;
     font-size: 1.7rem;
     color: $color2;
@@ -595,6 +615,8 @@ header {
 }
 
 .quote {
+  display: flex;
+  flex-direction: column;
   line-height: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -603,7 +625,11 @@ header {
   background-color: black;
   width: 100%;
 
-  & p {
+  & span:first-child {
+    margin-bottom: 10px;
+  }
+
+  & span {
     padding: 0 50px 0 50px;
   }
 }
@@ -656,9 +682,9 @@ header {
   background-position: 33% 30px;
 }
 
-////////////////////////
-// mobile devices     //
-////////////////////////
+///////////////////////////////
+// larger mobile devices     //
+///////////////////////////////
 @media (min-width: 375px) {
   .sectionTitle {
     font-size: 2.5rem;
@@ -673,7 +699,7 @@ header {
   }
 
   .aboutText {
-    & span {
+    & h2 {
       font-size: 2rem;
     }
   }
@@ -747,6 +773,7 @@ header {
     height: 100px;
     margin-right: 20px;
     opacity: 1;
+    pointer-events: auto;
   }
 
   .navList {
@@ -888,22 +915,23 @@ header {
     height: 100%;
     width: 100%;
 
-    & a {
+    & .projectButton,
+    & .projectButton a {
       height: 107px;
       width: 98%;
       text-decoration: none;
-      margin-top: 1px;
-      margin-bottom: 1px;
+    }
+
+    & .projectButton a {
+      display: grid;
+      place-content: center center;
     }
 
     & button {
       height: 107px;
       width: 98%;
       padding: 0;
-      margin-top: 1px;
-      margin-bottom: 1px;
       background-color: rgba(0, 0, 0, 0);
-      border: none;
     }
   }
 
@@ -911,10 +939,18 @@ header {
     display: grid;
     place-items: center center;
     height: 100%;
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 0 15px 15px 0;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+
+    & a {
+    }
+
+    &:first-child,
+    &:last-child {
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
 
     &:hover {
       background-color: black;
@@ -942,9 +978,10 @@ header {
     font-size: 1.2rem;
     line-height: 2rem;
 
-    & span {
+    & h2 {
       width: 100%;
       font-size: 3.5rem;
+      margin-bottom: 30px;
     }
   }
 

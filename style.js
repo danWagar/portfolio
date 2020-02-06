@@ -57,8 +57,8 @@ function closeNavEventListener() {
 function contactEventListener() {
   let screenWidth = window.innerWidth;
   let openContact = document.querySelector('.openContact');
-  openContact.onclick = () => {
-    console.log('openContact clicked');
+  openContact.onclick = e => {
+    e.stopPropagation();
     showContact(screenWidth);
   };
 }
@@ -148,8 +148,12 @@ function showContact(width) {
     buttons.classList.toggle('fade');
     setTimeout(() => {
       contact.classList.toggle('show');
+      contact.style.zIndex = 10;
     }, 500);
-  } else contact.classList.toggle('show');
+  } else {
+    contact.classList.toggle('show');
+    contact.style.zIndex = 10;
+  }
 }
 
 function closeContact(width) {
@@ -165,6 +169,9 @@ function closeContact(width) {
     }, 800);
   }
   contact.classList.toggle('show');
+  setTimeout(() => {
+    contact.style.zIndex = -1;
+  }, 1000);
 }
 
 function toggleNav(burger, close) {
@@ -178,7 +185,6 @@ function toggleNav(burger, close) {
   }, 100);
 
   if (zIndex === '6') {
-    //navList.style.display = 'flex';
     burger.classList.toggle('hide');
     burger.tabIndex = -1;
     burger.style.zIndex = '1';

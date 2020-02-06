@@ -6,6 +6,7 @@ body {
           box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -146,9 +147,10 @@ header .l3 {
   opacity: 0;
   -webkit-clip-path: circle(25px at calc(100vw - 45px) 40px);
           clip-path: circle(25px at calc(100vw - 45px) 40px);
+  pointer-events: none;
+  z-index: 3;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  z-index: 3;
 }
 
 .nav a {
@@ -160,6 +162,7 @@ header .l3 {
           clip-path: circle(75%);
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 1;
+  pointer-events: auto;
   z-index: 10;
 }
 
@@ -343,21 +346,8 @@ header .l3 {
   font-size: 1.75rem;
 }
 
-.contactNav .contactButtons a {
+.contactNav .contactButtons a, .contactNav .contactButtons:visited, .contactNav .contactButtons:hover, .contactNav .contactButtons:focus {
   color: #00c4ff;
-}
-
-.contactNav .contactButtons a:visited {
-  color: #00c4ff;
-}
-
-.contactNav .contactButtons a:hover {
-  color: #8700ff;
-}
-
-.contactNav .contactButtons a:focus {
-  outline: none;
-  color: #8700ff;
 }
 
 .contactNav .contactButtons button {
@@ -370,10 +360,9 @@ header .l3 {
   color: #00c4ff;
 }
 
-.contactNav .contactButtons .open:hover,
-.contactNav .contactButtons .open:focus {
+.contactNav .contactButtons .open:hover {
   outline: none;
-  color: #8700ff;
+  color: #00c4ff;
 }
 
 .contactNav .contactButtons.fade {
@@ -395,7 +384,7 @@ header .l3 {
   bottom: -240px;
   height: 240px;
   width: 100vw;
-  z-index: 10;
+  z-index: -1;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -405,17 +394,29 @@ header .l3 {
 .contactInfo .contactContainer {
   width: 100%;
   text-align: center;
+  padding-top: 10px;
   font-family: 'open sans', sans-serif;
   font-size: 1.125rem;
   background-color: #00c4ff;
-  color: black;
+}
+
+.contactInfo .email_link {
+  display: block;
+  padding-top: 25px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contactInfo .email_link:hover, .contactInfo .email_link:focus {
+  color: white;
 }
 
 .contactInfo p {
   padding-top: 25px;
+  color: white;
 }
 
-.contactInfo.show, .contactInfo:target {
+.contactInfo.show,
+.contactInfo .target {
   -webkit-transform: translateY(-240px);
           transform: translateY(-240px);
 }
@@ -546,6 +547,12 @@ header .l3 {
   cursor: auto;
 }
 
+.projectTextContainer p a,
+.projectTextContainer p a:hover,
+.projectTextContainer p a:visited {
+  color: #00c4ff;
+}
+
 .container1 {
   background-image: linear-gradient(30deg, rgba(0, 196, 255, 0.2) 10%, rgba(255, 93, 168, 0.2));
 }
@@ -642,6 +649,11 @@ header .l3 {
   list-style: none;
 }
 
+.projectButtons a {
+  color: #ff5da8;
+  text-decoration: none;
+}
+
 .projectButtons a:hover,
 .projectButtons a:visited {
   color: #ff5da8;
@@ -649,13 +661,14 @@ header .l3 {
 
 .projectButtons button {
   background-color: rgba(0, 0, 0, 0);
-  border: none;
 }
 
 .projectButton {
+  display: -ms-grid;
+  display: grid;
+  place-content: center center;
   height: 45px;
   width: 45px;
-  text-align: center;
   line-height: 45px;
   font-size: 1.7rem;
   color: #ff5da8;
@@ -663,6 +676,8 @@ header .l3 {
 
 .projectButton button {
   background: none;
+  width: 45px;
+  height: 45px;
   border: none;
   font-size: 1.7rem;
   color: #ff5da8;
@@ -697,6 +712,13 @@ header .l3 {
 }
 
 .quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   line-height: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -706,7 +728,11 @@ header .l3 {
   width: 100%;
 }
 
-.quote p {
+.quote span:first-child {
+  margin-bottom: 10px;
+}
+
+.quote span {
   padding: 0 50px 0 50px;
 }
 
@@ -775,7 +801,7 @@ header .l3 {
   .me {
     height: 750px;
   }
-  .aboutText span {
+  .aboutText h2 {
     font-size: 2rem;
   }
   .projectTextContainer p {
@@ -835,6 +861,7 @@ header .l3 {
     height: 100px;
     margin-right: 20px;
     opacity: 1;
+    pointer-events: auto;
   }
   .navList {
     position: static;
@@ -1010,32 +1037,36 @@ header .l3 {
     height: 100%;
     width: 100%;
   }
-  .projectButtons a {
+  .projectButtons .projectButton,
+  .projectButtons .projectButton a {
     height: 107px;
     width: 98%;
     text-decoration: none;
-    margin-top: 1px;
-    margin-bottom: 1px;
+  }
+  .projectButtons .projectButton a {
+    display: -ms-grid;
+    display: grid;
+    place-content: center center;
   }
   .projectButtons button {
     height: 107px;
     width: 98%;
     padding: 0;
-    margin-top: 1px;
-    margin-bottom: 1px;
     background-color: rgba(0, 0, 0, 0);
-    border: none;
   }
   .projectButton {
     display: -ms-grid;
     display: grid;
     place-items: center center;
     height: 100%;
-    width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 0 15px 15px 0;
     -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
             box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+  }
+  .projectButton:first-child, .projectButton:last-child {
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
   .projectButton:hover {
     background-color: black;
@@ -1062,9 +1093,10 @@ header .l3 {
     font-size: 1.2rem;
     line-height: 2rem;
   }
-  .aboutText span {
+  .aboutText h2 {
     width: 100%;
     font-size: 3.5rem;
+    margin-bottom: 30px;
   }
   .aboutImg {
     width: 25%;

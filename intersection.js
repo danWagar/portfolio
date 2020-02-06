@@ -1,13 +1,19 @@
 'use strict';
 
 function init() {
-  let threshold = 0.5;
+  let threshold = 0.8;
+  let aboutThreshold = 0.4;
   let projectThreshold = 0.2;
 
   let options = {
     //root: document.querySelector('#scrollArea'),
     rootMargin: '0px',
     threshold: threshold
+  };
+
+  let aboutOptions = {
+    rootMargin: '0px',
+    threshold: aboutThreshold
   };
 
   let projectOptions = {
@@ -47,15 +53,16 @@ function init() {
   };
 
   let observer = new IntersectionObserver(callback, options);
+  let aboutObserver = new IntersectionObserver(callback, aboutOptions);
   let projectObserver = new IntersectionObserver(callback, projectOptions);
 
   let targetHome = document.querySelector('#home');
-  let targetAbout = document.querySelector('#about');
+  let targetAbout = document.querySelector('#aboutIntersection');
   let targetProjects = document.querySelector('#projectsObserve');
   let targetContact = document.querySelector('#contact');
 
   observer.observe(targetHome);
-  observer.observe(targetAbout);
+  aboutObserver.observe(targetAbout);
   projectObserver.observe(targetProjects);
   observer.observe(targetContact);
 }

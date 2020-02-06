@@ -8,7 +8,7 @@
     <link href="reset.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|open+sans|Roboto+Slab|Lexend+Mega&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat%7Copen+sans%7CRoboto+Slab%7CLexend+Mega&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0-1/css/all.css" />
@@ -54,26 +54,25 @@
           <a href="#" class="target">
             <i class="close fa fa-angle-double-down"></i>
           </a>
-          <p>dandwagar@gmail.com</p>
+          <a class="email_link" href="mailto:dandwagar@gmail.com">dandwagar@gmail.com</a>
           <p>(989) 614-1160</p>
         </div>
       </div>
 
-      <div class="sectionTitle"><p>ABOUT ME</p></div>
+      <div class="sectionTitle" id="about"><p>ABOUT ME</p></div>
       <p class="second">ABOUT ME</p>
-
-      <section class="aboutMe" id="about">
-        <div class="quote">
-          <p>
+      <section class="aboutMe" id="aboutIntersection">
+        <h2 class="quote">
+          <span>
             Knowledge is a treasure, but practice is the key to it.
-          </p>
-          <p>
+          </span>
+          <span>
             -Lao Tzu
-          </p>
-        </div>
+          </span>
+        </h2>
         <section class="me">
           <div class="aboutText">
-            <span>Hi! I'm Dan.</span>
+            <h2>Hi! I'm Dan.</h2>
             <p>
               In my past life as a product support engineer at Teradata I developed a passion for working in a
               team to solve high-impact real world problems.
@@ -109,19 +108,24 @@
                 as a hierarchical structure. The owner/admin can promote workers to project managers and then
                 create and assign projects to them. Managers then create tasks needed to complete the project
                 and assign employees to them. Employees log hours, request edits to a task, and submit tasks
-                for approval by the project manager either approves it or requests revisions.
+                for approval by the project manager who either approves it or requests revisions.
               </p>
               <p>
                 The app was created by myself and 4 other developers where I served as the UI/UX design lead
                 and contributed to the code base. The design process included the initial design layout in
-                Figma which would serve to guide the entire front end development process. The design, styling
-                and images are all my original work.
+                <a
+                  href="https://www.figma.com/file/ZWC9lyFmQM94GEujyTuC2Z/Owner-View?node-id=4%3A239"
+                  target="_blank"
+                  >Figma</a
+                >
+                which would serve to guide the entire front end development process. The design, styling and
+                images are all my original work.
               </p>
             </div>
           </div>
           <header class="projectTitle">
-            <h1 class="primaryText">manageLazily</h1>
-            <h2 class="secondaryText">Fullstack Project Management App</h2>
+            <h2 class="primaryText">manageLazily</h2>
+            <h3 class="secondaryText">Fullstack Project Management App</h3>
           </header>
           <span class="techTitle">Technologies</span>
           <ul class="technologies row1">
@@ -135,22 +139,21 @@
             <li><img src="images/chart.svg" alt="chart.js logo" /></li>
           </ul>
           <a class="screenShot" href="https://managelazily.com" target="_blank">
-            <img src="images/project_view.webp" alt="manageLazily screen-shot" />
+            <img src="images/project_view.png" alt="manageLazily screen-shot" />
           </a>
           <nav class="projectNav">
             <ul class="projectButtons">
-              <a href="https://github.com/balayaydemir/Capstone-Group3-Client" target="_blank">
-                <li class="projectButton">
+              <li class="projectButton">
+                <a href="https://github.com/balayaydemir/Capstone-Group3-Client" target="_blank">
                   <i class="fab fa-github"></i>
-                </li>
-              </a>
-              <button class="infoButton info5">
-                <li class="projectButton"><i class="fa fa-info"></i></li>
-              </button>
-              <a href="https://managelazily.com" target="_blank">
-                <li class="projectButton">
-                  <i class="fa fa-play play"></i></li
-              ></a>
+                </a>
+              </li>
+              <li class="projectButton">
+                <button class="infoButton info5"><i class="fa fa-info"></i></button>
+              </li>
+              <li class="projectButton">
+                <a href="https://managelazily.com" target="_blank"> <i class="fa fa-play play"></i></a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -166,8 +169,8 @@
                 their inventory and where it is located.
               </p>
               <p>
-                This RESTful app was developed with React on the client side and with Node, Express and Knex
-                on the server side with testing handled by Chai and Mocha.
+                This RESTful app was developed with React on the client side and with Node, Express,
+                PostgreSQL and Knex on the server side with testing handled by Chai and Mocha.
               </p>
               <p>
                 As with all my projects there is a strong emphasis on design. The app displays large amounts
@@ -177,8 +180,8 @@
             </div>
           </div>
           <header class="projectTitle">
-            <h1 class="primaryText">BL3 Gear Tracker</h1>
-            <h2 class="secondaryText">Fullstack REST app for tracking<br />Borderlands 3 player inventory</h2>
+            <h2 class="primaryText">BL3 Gear Tracker</h2>
+            <h3 class="secondaryText">Fullstack REST app for tracking<br />Borderlands 3 player inventory</h3>
           </header>
           <span class="techTitle">Technologies</span>
           <ul class="technologies row1">
@@ -193,21 +196,23 @@
             <li><img src="images/mocha.svg" alt="mocha logo" /></li>
           </ul>
           <a class="screenShot" href="https://bl3tracker-client.now.sh" target="_blank">
-            <img src="images/bl3.webp" alt="Borderlands 3 Gear Tracker screen-shot" />
+            <img src="images/bl3.png" alt="Borderlands 3 Gear Tracker screen-shot" />
           </a>
           <nav class="projectNav">
             <ul class="projectButtons">
-              <a href="https://github.com/danWagar/bl3tracker-client" target="_blank">
-                <li class="projectButton">
-                  <i class="fab fa-github"></i></li
-              ></a>
-              <button class="infoButton info4">
-                <li class="projectButton"><i class="fa fa-info"></i></li>
-              </button>
-              <a href="https://bl3tracker-client.now.sh" target="_blank">
-                <li class="projectButton">
-                  <i class="fa fa-play play"></i></li
-              ></a>
+              <li class="projectButton">
+                <a href="https://github.com/danWagar/bl3tracker-client" target="_blank">
+                  <i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="projectButton">
+                <button class="infoButton info4"><i class="fa fa-info"></i></button>
+              </li>
+              <li class="projectButton">
+                <a href="https://bl3tracker-client.now.sh" target="_blank">
+                  <i class="fa fa-play play"></i
+                ></a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -225,14 +230,15 @@
               </p>
               <p>
                 For this project I was responsible for all back end code, including the linked list
-                implementations, while also having some contributions on the front end code. I was also responsible for design and all styling as well as ensuring tests
-                passed on both the front and back end.
+                implementations, while also having some contributions on the front end code. I was also
+                responsible for design and all styling as well as ensuring tests passed on both the front and
+                back end.
               </p>
             </div>
           </div>
           <header class="projectTitle">
-            <h1 class="primaryText">Le Beguette</h1>
-            <h2 class="secondaryText">Spaced Repetition learning App</h2>
+            <h2 class="primaryText">Le Beguette</h2>
+            <h3 class="secondaryText">Spaced Repetition learning App</h3>
           </header>
           <span class="techTitle">Technologies</span>
           <ul class="technologies row1">
@@ -248,22 +254,23 @@
             <li><img src="images/mocha.svg" alt="mocha logo" /></li>
           </ul>
           <a class="screenShot" href="https://spaced-repetition-app.mal3905.now.sh/login" target="_blank">
-            <img src="images/spaced-repetition.webp" alt="Le Baguette screen-shot" />
+            <img src="images/spaced-repetition.png" alt="Le Baguette screen-shot" />
           </a>
           <nav class="projectNav">
             <ul class="projectButtons">
-              <a href="https://github.com/danWagar/LeBaguette-client" target="_blank">
-                <li class="projectButton">
-                  <i class="fab fa-github"></i>
-                </li>
-              </a>
-              <button class="infoButton info3">
-                <li class="projectButton"><i class="fa fa-info"></i></li>
-              </button>
-              <a href="https://spaced-repetition-app.mal3905.now.sh/login" target="_blank">
-                <li class="projectButton">
-                  <i class="fa fa-play play"></i></li
-              ></a>
+              <li class="projectButton">
+                <a href="https://github.com/danWagar/LeBaguette-client" target="_blank">
+                  <i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="projectButton">
+                <button class="infoButton info3"><i class="fa fa-info"></i></button>
+              </li>
+              <li class="projectButton">
+                <a href="https://spaced-repetition-app.mal3905.now.sh/login" target="_blank">
+                  <i class="fa fa-play play"></i
+                ></a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -286,8 +293,8 @@
             </div>
           </div>
           <header class="projectTitle">
-            <h1 class="primaryText">MyBookmarks App</h1>
-            <h2 class="secondaryText">Dynamic web app utilizing Web API</h2>
+            <h2 class="primaryText">MyBookmarks App</h2>
+            <h3 class="secondaryText">Dynamic web app utilizing Web API</h3>
           </header>
           <span class="techTitle">Technologies</span>
           <ul class="technologies">
@@ -305,17 +312,19 @@
           </a>
           <nav class="projectNav">
             <ul class="projectButtons">
-              <a href="https://github.com/thinkful-ei-heron/DanW-bookmarks-app" target="_blank">
-                <li class="projectButton">
-                  <i class="fab fa-github"></i></li
-              ></a>
-              <button class="infoButton info2">
-                <li class="projectButton"><i class="fa fa-info"></i></li>
-              </button>
-              <a href="https://thinkful-ei-heron.github.io/DanW-bookmarks-app/" target="_blank">
-                <li class="projectButton">
-                  <i class="fa fa-play play"></i></li
-              ></a>
+              <li class="projectButton">
+                <a href="https://github.com/thinkful-ei-heron/DanW-bookmarks-app" target="_blank">
+                  <i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="projectButton">
+                <button class="infoButton info2"><i class="fa fa-info"></i></button>
+              </li>
+              <li class="projectButton">
+                <a href="https://thinkful-ei-heron.github.io/DanW-bookmarks-app/" target="_blank">
+                  <i class="fa fa-play play"></i
+                ></a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -341,8 +350,8 @@
             </div>
           </div>
           <header class="projectTitle">
-            <h1 class="primaryText">NFL Records Quiz</h1>
-            <h2 class="secondaryText">Dynamic single page web app</h2>
+            <h2 class="primaryText">NFL Records Quiz</h2>
+            <h3 class="secondaryText">Dynamic single page web app</h3>
           </header>
           <span class="techTitle">Technologies</span>
           <ul class="technologies">
@@ -356,19 +365,19 @@
           </a>
           <nav class="projectNav">
             <ul class="projectButtons">
-              <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp" target="_blank">
-                <li class="projectButton">
-                  <i class="fab fa-github"></i>
-                </li>
-              </a>
-              <button class="infoButton info1">
-                <li class="projectButton"><i class="fa fa-info"></i></li>
-              </button>
-              <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
-                <li class="projectButton">
-                  <i class="fa fa-play play"></i>
-                </li>
-              </a>
+              <li class="projectButton">
+                <a href="https://github.com/thinkful-ei-heron/Dan_Kei_quizApp" target="_blank">
+                  <i class="fab fa-github"></i
+                ></a>
+              </li>
+              <li class="projectButton">
+                <button class="infoButton info1"><i class="fa fa-info"></i></button>
+              </li>
+              <li class="projectButton">
+                <a href="https://thinkful-ei-heron.github.io/Dan_Kei_quizApp/" target="_blank">
+                  <i class="fa fa-play play"></i
+                ></a>
+              </li>
             </ul>
           </nav>
         </div>
