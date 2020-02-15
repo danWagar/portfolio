@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="I am a web developer interested in design who specializes in React with experience developing REST APIs with Node, Express and Postgres"
+    />
+    <title>Dan Wagar's Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="newton.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat%7Copen+sans%7CRoboto+Slab%7CLexend+Mega&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0-1/css/all.css" />
+  </head>
+
+  <body class="no-focus-outline">
+    <main>
+      <nav class="nav" id="nav">
+        <ul class="navList">
+          <li><a class="navLink homeLink" href="/#home">Home</a></li>
+          <li><a class="navLink aboutLink" href="/#about">About</a></li>
+          <li><a class="navLink projectsLink" href="/#projects">Projects</a></li>
+        </ul>
+        <i class="closeBurger"><a href="#" class="target">&#x2716;</a></i>
+      </nav>
+      <i class="burger"><a href="#nav" class="target">&#9776;</a></i>
+      <header>
+        <div class="logo">
+          <div class="top">
+            <p class="leftHalf">
+              <span class="l1">D</span>
+              <span class="l2">W</span>
+            </p>
+            <p class="rightHalf">
+              <span class="l3">W</span>
+              <span class="l4">D</span>
+            </p>
+          </div>
+          <h1 class="bottom">Dan Wagar | Web Developer</h1>
+        </div>
+      </header>
+      <section>
+        <h2>404 - Sorry, that page doesn't exist!</h2>
+
+        <div id="screen">
+          <canvas class="gameScreen" id="gc" width="550" height="550"></canvas>
+        </div>
+      </section>
+    </main>
+    <script src="style404.js"></script>
+    <script type="module" src="./spaceLoot/sprite.js"></script>
+    <script type="module" src="./spaceLoot/game.js"></script>
+    <script type="module" src="./spaceLoot/gameState.js"></script>
+    <script type="module" src="./spaceLoot/main.js"></script>
+  </body>
+</html>

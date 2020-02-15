@@ -369,6 +369,10 @@ header .l3 {
   opacity: 0;
 }
 
+.resume img {
+  height: 38px;
+}
+
 .contactInfo {
   position: fixed;
   display: -webkit-box;
