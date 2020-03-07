@@ -1041,8 +1041,7 @@ header .l3 {
     height: 100%;
     width: 100%;
   }
-  .projectButtons .projectButton,
-  .projectButtons .projectButton a {
+  .projectButtons .projectButton {
     height: 107px;
     width: 98%;
     text-decoration: none;
@@ -1051,6 +1050,8 @@ header .l3 {
     display: -ms-grid;
     display: grid;
     place-content: center center;
+    height: 107px;
+    width: 61px;
   }
   .projectButtons button {
     height: 107px;
@@ -1067,6 +1068,7 @@ header .l3 {
     border-radius: 0 15px 15px 0;
     -webkit-box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
             box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
   }
   .projectButton:first-child, .projectButton:last-child {
     margin-top: 1px;

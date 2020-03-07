@@ -919,8 +919,7 @@ header {
     height: 100%;
     width: 100%;
 
-    & .projectButton,
-    & .projectButton a {
+    & .projectButton {
       height: 107px;
       width: 98%;
       text-decoration: none;
@@ -929,6 +928,8 @@ header {
     & .projectButton a {
       display: grid;
       place-content: center center;
+      height: 107px;
+      width: 61px;
     }
 
     & button {
@@ -946,9 +947,7 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 0 15px 15px 0;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.35);
-
-    & a {
-    }
+    cursor: pointer;
 
     &:first-child,
     &:last-child {
